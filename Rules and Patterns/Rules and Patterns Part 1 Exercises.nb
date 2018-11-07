@@ -1,0 +1,1478 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     48506,       1470]
+NotebookOptionsPosition[     42717,       1268]
+NotebookOutlinePosition[     43431,       1296]
+CellTagsIndexPosition[     43303,       1290]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Rules and Patterns Part 1", "Title",
+ CellChangeTimes->{{3.679347636506831*^9, 3.679347639321329*^9}, 
+   3.6799472491694393`*^9, {3.680412306236822*^9, 3.680412306328977*^9}, {
+   3.6868007549322357`*^9, 3.686800757913107*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Basic Exercises", "Section",
+ CellChangeTimes->{{3.67933910070142*^9, 3.679339105692511*^9}, {
+  3.679347656225293*^9, 3.679347658144876*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question ",
+ 
+ CounterBox["Subsection"]
+}], "Subsection",
+ CellChangeTimes->{{3.6793391081481113`*^9, 3.6793391093958683`*^9}, {
+  3.679343285218049*^9, 3.679343309976263*^9}}],
+
+Cell[TextData[{
+ "Use a ",
+ StyleBox["Rule", "Code"],
+ " and ",
+ StyleBox["ReplaceAll", "Code"],
+ " to replace all instances of ",
+ StyleBox["x", "Code"],
+ " with ",
+ StyleBox["1", "Code"],
+ " in the following list:"
+}], "Text",
+ CellChangeTimes->{{3.680413231211478*^9, 3.680413272194563*^9}, {
+  3.686857848652111*^9, 3.686857879352662*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"x", ",", "y", ",", "z", ",", "x", ",", "y", ",", "z"}], 
+  "}"}]], "Input",
+ CellChangeTimes->{{3.686857881985869*^9, 3.686857904056321*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.680413280898682*^9, 3.6804132817067957`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{"x", ",", "y", ",", "z", ",", "x", ",", "y", ",", "z"}], "}"}], "/.", 
+  RowBox[{"x", "\[Rule]", "1"}]}]], "Input",
+ CellChangeTimes->{{3.6804132849165983`*^9, 3.680413291202773*^9}, {
+  3.6868579152595778`*^9, 3.686857919655836*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "y", ",", "z", ",", "1", ",", "y", ",", "z"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.750499118546837*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.75049911117801*^9, 3.750499112544479*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question ",
+ 
+ CounterBox["Subsection"]
+}], "Subsection",
+ CellChangeTimes->{{3.6793391081481113`*^9, 3.6793391093958683`*^9}, {
+  3.679343285218049*^9, 3.679343309976263*^9}}],
+
+Cell[TextData[{
+ "Use a ",
+ StyleBox["Rule", "Code"],
+ " and ",
+ StyleBox["ReplaceAll", "Code"],
+ " to evaluate the following formula at ",
+ StyleBox["x = 3", "Code"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.680413231211478*^9, 3.680413272194563*^9}, {
+  3.686857848652111*^9, 3.686857879352662*^9}, {3.686857957334605*^9, 
+  3.686857984893948*^9}}],
+
+Cell[BoxData[
+ SuperscriptBox["x", "2"]], "Input",
+ CellChangeTimes->{{3.686857881985869*^9, 3.686857904056321*^9}, {
+  3.686857992277823*^9, 3.686857998277529*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.680413280898682*^9, 3.6804132817067957`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["x", "2"], "/.", 
+  RowBox[{"x", "\[Rule]", "3"}]}]], "Input",
+ CellChangeTimes->{{3.6804132849165983`*^9, 3.680413291202773*^9}, {
+  3.6868579152595778`*^9, 3.686857919655836*^9}, {3.686858003861541*^9, 
+  3.686858007701529*^9}}],
+
+Cell[BoxData["9"], "Output",
+ CellChangeTimes->{3.750533760144435*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.75053375379629*^9, 3.7505337550218143`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question ",
+ 
+ CounterBox["Subsection"]
+}], "Subsection",
+ CellChangeTimes->{{3.6793391081481113`*^9, 3.6793391093958683`*^9}, {
+  3.679343285218049*^9, 3.679343309976263*^9}}],
+
+Cell[TextData[{
+ "Use a ",
+ StyleBox["Rule", "Code"],
+ " and ",
+ StyleBox["ReplaceAll", "Code"],
+ " to evaluate the quadratic formula for the equation: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", "2"], "-", "x", "-", "2"}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.680413231211478*^9, 3.680413272194563*^9}, {
+  3.686857848652111*^9, 3.686857879352662*^9}, {3.686857957334605*^9, 
+  3.686857984893948*^9}, {3.686858031060672*^9, 3.68685815233435*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"-", "b"}], "-", 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox["b", "2"], "-", 
+       RowBox[{"4", "a", " ", "c"}]}]]}], 
+    RowBox[{"2", "a"}]], ",", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"-", "b"}], "+", 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox["b", "2"], "-", 
+       RowBox[{"4", "a", " ", "c"}]}]]}], 
+    RowBox[{"2", "a"}]]}], "}"}]], "Input",
+ CellChangeTimes->{{3.6868581725031424`*^9, 3.686858192873686*^9}, 
+   3.686858252527268*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.680413280898682*^9, 3.6804132817067957`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"Replace", " ", "the", " ", "terms"}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.750533876783422*^9, 3.750533881826832*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"-", "b"}], "-", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["b", "2"], "-", 
+        RowBox[{"4", "a", " ", "c"}]}]]}], 
+     RowBox[{"2", "a"}]], ",", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"-", "b"}], "+", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["b", "2"], "-", 
+        RowBox[{"4", "a", " ", "c"}]}]]}], 
+     RowBox[{"2", "a"}]]}], "}"}], "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"a", "\[Rule]", "1"}], ",", 
+    RowBox[{"b", "\[Rule]", 
+     RowBox[{"-", "1"}]}], ",", 
+    RowBox[{"c", "\[Rule]", 
+     RowBox[{"-", "2"}]}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.6804132849165983`*^9, 3.680413291202773*^9}, {
+  3.6868579152595778`*^9, 3.686857919655836*^9}, {3.686858003861541*^9, 
+  3.686858007701529*^9}, {3.68685820187278*^9, 3.686858250215763*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"-", "1"}], ",", "2"}], "}"}]], "Output",
+ CellChangeTimes->{3.750533863217289*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.750533853143647*^9, 3.750533859731353*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question ",
+ 
+ CounterBox["Subsection"]
+}], "Subsection",
+ CellChangeTimes->{{3.6793391081481113`*^9, 3.6793391093958683`*^9}, {
+  3.679343285218049*^9, 3.679343309976263*^9}}],
+
+Cell["\<\
+Make a pattern that matches a symbol. Use MatchQ to verify that it works.\
+\>", "Text",
+ CellChangeTimes->{{3.680413231211478*^9, 3.680413272194563*^9}, {
+  3.686857848652111*^9, 3.686857879352662*^9}, {3.686857957334605*^9, 
+  3.686857984893948*^9}, {3.686858031060672*^9, 3.68685815233435*^9}, {
+  3.68685846148847*^9, 3.686858493631673*^9}, {3.686858671538447*^9, 
+  3.6868587203772383`*^9}, {3.6868588527816277`*^9, 3.686858855749483*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Symbol"}]], "Input",
+ CellChangeTimes->{{3.750533940116726*^9, 3.75053395664194*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\!\(\*RowBox[{\\\"Symbol\\\", \\\"[\\\", \
+StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"name\\\\\\\",\\\\\\\"TI\\\
+\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\"]\\\"}]\) refers \
+to a symbol with the specified name. \"\>", "MSG"], "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Symbol"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.75053395719858*^9},
+ CellTags->"Info3750533956-5124932"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "_"}]], "Input",
+ CellChangeTimes->{{3.750533959752529*^9, 3.750533960145796*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"_ or \\!\\(\\*RowBox[{\\\"Blank\\\", \\\"[\\\", \
+\\\"]\\\"}]\\) is a pattern object that can stand for any \
+\\!\\(\\*StyleBox[\\\"Mathematica\\\", FontSlant -> \\\"Italic\\\"]\\) \
+expression. \\n\\!\\(\\*StyleBox[RowBox[{\\\"_\\\", StyleBox[\\\"h\\\", \
+\\\"TI\\\"]}]]\\) or \\!\\(\\*RowBox[{\\\"Blank\\\", \\\"[\\\", \
+StyleBox[\\\"h\\\", \\\"TI\\\"], \\\"]\\\"}]\\) can stand for any expression \
+with head \\!\\(\\*StyleBox[\\\"h\\\", \\\"TI\\\"]\\). \"\>", "MSG"], 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Blank"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.750533960842462*^9},
+ CellTags->"Info3750533960-5124932"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.680413280898682*^9, 3.6804132817067957`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatchQ", "[", 
+  RowBox[{"x", ",", "_Symbol"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6804132849165983`*^9, 3.680413291202773*^9}, {
+  3.6868579152595778`*^9, 3.686857919655836*^9}, {3.686858003861541*^9, 
+  3.686858007701529*^9}, {3.68685820187278*^9, 3.686858250215763*^9}, {
+  3.686858531625875*^9, 3.686858540494299*^9}, {3.686858724073989*^9, 
+  3.6868587649682703`*^9}, {3.6868588604058867`*^9, 3.686858865421699*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.750533932851301*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.750533928863461*^9, 3.750533929720397*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question ",
+ 
+ CounterBox["Subsection"]
+}], "Subsection",
+ CellChangeTimes->{{3.6793391081481113`*^9, 3.6793391093958683`*^9}, {
+  3.679343285218049*^9, 3.679343309976263*^9}}],
+
+Cell["\<\
+Make a pattern that matches the sum of an integer and a symbol. Use MatchQ to \
+verify that it works.\
+\>", "Text",
+ CellChangeTimes->{{3.680413231211478*^9, 3.680413272194563*^9}, {
+  3.686857848652111*^9, 3.686857879352662*^9}, {3.686857957334605*^9, 
+  3.686857984893948*^9}, {3.686858031060672*^9, 3.68685815233435*^9}, {
+  3.68685846148847*^9, 3.686858493631673*^9}, {3.686858671538447*^9, 
+  3.6868587203772383`*^9}, {3.686858783447625*^9, 3.686858786839492*^9}, {
+  3.686858874100707*^9, 3.686858875061613*^9}, {3.686859203747918*^9, 
+  3.6868592084436083`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.680413280898682*^9, 3.6804132817067957`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+  "Test", " ", "whether", " ", "it", " ", "is", " ", "possible", " ", "to", 
+   " ", "add", " ", "an", " ", "integer", " ", "and", " ", "symbol", " ", 
+   "using", " ", "MatchQ"}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.750534035838951*^9, 3.750534069726955*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatchQ", "[", 
+  RowBox[{
+   RowBox[{"1", "+", "x"}], ",", 
+   RowBox[{"_Integer", "+", "_Symbol"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6804132849165983`*^9, 3.680413291202773*^9}, {
+  3.6868579152595778`*^9, 3.686857919655836*^9}, {3.686858003861541*^9, 
+  3.686858007701529*^9}, {3.68685820187278*^9, 3.686858250215763*^9}, {
+  3.686858531625875*^9, 3.686858540494299*^9}, {3.686858724073989*^9, 
+  3.6868587649682703`*^9}, {3.686858795208947*^9, 3.6868588352382298`*^9}, {
+  3.68685887860531*^9, 3.686858944819265*^9}, {3.6868590014119787`*^9, 
+  3.686859026265122*^9}, {3.6868590569046183`*^9, 3.686859173589282*^9}, {
+  3.6868592105163116`*^9, 3.686859226603962*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.7505340209597073`*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.750534013579172*^9, 3.7505340142612*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question ",
+ 
+ CounterBox["Subsection"]
+}], "Subsection",
+ CellChangeTimes->{{3.6793391081481113`*^9, 3.6793391093958683`*^9}, {
+  3.679343285218049*^9, 3.679343309976263*^9}}],
+
+Cell["\<\
+Make a pattern that matches the sum of two symbols. Use MatchQ to verify that \
+it works.\
+\>", "Text",
+ CellChangeTimes->{{3.680413231211478*^9, 3.680413272194563*^9}, {
+  3.686857848652111*^9, 3.686857879352662*^9}, {3.686857957334605*^9, 
+  3.686857984893948*^9}, {3.686858031060672*^9, 3.68685815233435*^9}, {
+  3.68685846148847*^9, 3.686858493631673*^9}, {3.686858671538447*^9, 
+  3.6868587203772383`*^9}, {3.686858783447625*^9, 3.686858786839492*^9}, {
+  3.686858874100707*^9, 3.686858875061613*^9}, {3.686859203747918*^9, 
+  3.6868592084436083`*^9}, {3.687461336969934*^9, 3.687461340399764*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.680413280898682*^9, 3.6804132817067957`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatchQ", "[", 
+  RowBox[{
+   RowBox[{"x", "+", "y"}], ",", 
+   RowBox[{"a_Symbol", "+", "b_Symbol"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6804132849165983`*^9, 3.680413291202773*^9}, {
+  3.6868579152595778`*^9, 3.686857919655836*^9}, {3.686858003861541*^9, 
+  3.686858007701529*^9}, {3.68685820187278*^9, 3.686858250215763*^9}, {
+  3.686858531625875*^9, 3.686858540494299*^9}, {3.686858724073989*^9, 
+  3.6868587649682703`*^9}, {3.686858795208947*^9, 3.6868588352382298`*^9}, {
+  3.68685887860531*^9, 3.686858944819265*^9}, {3.6868590014119787`*^9, 
+  3.686859026265122*^9}, {3.6868590569046183`*^9, 3.686859173589282*^9}, {
+  3.6868592105163116`*^9, 3.686859226603962*^9}, {3.6874613459543667`*^9, 
+  3.687461354327766*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.750534120223366*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Note: The reason that ",
+ StyleBox["_Symbol + _Symbol", "Code"],
+ " doesn\[CloseCurlyQuote]t work is Mathematica interprets it as the same \
+object summed twice. You have to tell Mathematica that the two symbols are \
+not the same. We did this in our solution by giving the patterns distinct \
+names, ",
+ StyleBox["a", "Code"],
+ " and ",
+ StyleBox["b", "Code"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.687461367945313*^9, 3.6874614818363543`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7505340984278183`*^9, 3.750534099237687*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Intermediate Exercises: Matching Poker Hands", "Section",
+ CellChangeTimes->{{3.67933910070142*^9, 3.679339105692511*^9}, {
+  3.679347656225293*^9, 3.679347658144876*^9}, {3.687461626963214*^9, 
+  3.687461646017445*^9}}],
+
+Cell["\<\
+Let\[CloseCurlyQuote]s have some fun with poker hands! We\[CloseCurlyQuote]ll \
+be using our now familiar deck:\
+\>", "Text",
+ CellChangeTimes->{{3.6874617936773863`*^9, 3.687461835302472*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"values", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", ",", "9",
+      ",", "10", ",", "J", ",", "Q", ",", "K", ",", "A"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"suits", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\[DiamondSuit]", ",", "\[ClubSuit]", ",", "\[HeartSuit]", ",", 
+     "\[SpadeSuit]"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"deck", "=", 
+  RowBox[{"Tuples", "[", 
+   RowBox[{"{", 
+    RowBox[{"values", ",", "suits"}], "}"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.680415968265767*^9, 3.680415992791683*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "\[ClubSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "\[ClubSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "\[ClubSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "\[ClubSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "\[ClubSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "\[ClubSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "\[ClubSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "\[ClubSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "\[ClubSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"J", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"J", ",", "\[ClubSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"J", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"J", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Q", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Q", ",", "\[ClubSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Q", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Q", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"K", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"K", ",", "\[ClubSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"K", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"K", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"A", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"A", ",", "\[ClubSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"A", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"A", ",", "\[SpadeSuit]"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.750534465056725*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question ",
+ 
+ CounterBox["Subsection"]
+}], "Subsection",
+ CellChangeTimes->{{3.6793391081481113`*^9, 3.6793391093958683`*^9}, {
+  3.679343285218049*^9, 3.679343309976263*^9}}],
+
+Cell["\<\
+Make a pattern that matches cards that are hearts, for example:\
+\>", "Text",
+ CellChangeTimes->{{3.680413231211478*^9, 3.680413272194563*^9}, {
+  3.686857848652111*^9, 3.686857879352662*^9}, {3.686857957334605*^9, 
+  3.686857984893948*^9}, {3.686858031060672*^9, 3.68685815233435*^9}, {
+  3.68685846148847*^9, 3.686858493631673*^9}, {3.686858671538447*^9, 
+  3.6868587203772383`*^9}, {3.686858783447625*^9, 3.686858786839492*^9}, {
+  3.686858874100707*^9, 3.686858875061613*^9}, {3.686859203747918*^9, 
+  3.6868592084436083`*^9}, {3.687461336969934*^9, 3.687461340399764*^9}, {
+  3.687461996081025*^9, 3.687462008200864*^9}, {3.687462199612713*^9, 
+  3.6874622196201563`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"deck", "[", 
+  RowBox[{"[", "7", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6874622205477333`*^9, 3.687462224060388*^9}}],
+
+Cell["Use ReplaceAll to replace all heart cards with \
+\[OpenCurlyDoubleQuote]Heart!\[CloseCurlyDoubleQuote]", "Text",
+ CellChangeTimes->{{3.687462235732132*^9, 3.687462293130601*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7505341588635263`*^9, 3.750534159654406*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.680413280898682*^9, 3.6804132817067957`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{"replace", " ", "all", " ", "paired", " ", "list", " ", 
+    RowBox[{"with", " ", "'"}], 
+    RowBox[{"Heart", "!"}]}], ",", " ", 
+   RowBox[{
+   "regardless", " ", "of", " ", "what", " ", "the", " ", "first", " ", 
+    "element", " ", "in", " ", "the", " ", "list", " ", "is", " ", 
+    RowBox[{"(", "blank", ")"}]}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.750534231956111*^9, 3.750534255059862*^9}, {
+  3.750534304435616*^9, 3.750534315593601*^9}, {3.750534480433959*^9, 
+  3.750534493632917*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"deck", "/.", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"_", ",", "\[HeartSuit]"}], "}"}], "\[Rule]", 
+   "\"\<Heart!\>\""}]}]], "Input",
+ CellChangeTimes->{{3.6804132849165983`*^9, 3.680413291202773*^9}, {
+  3.6868579152595778`*^9, 3.686857919655836*^9}, {3.686858003861541*^9, 
+  3.686858007701529*^9}, {3.68685820187278*^9, 3.686858250215763*^9}, {
+  3.686858531625875*^9, 3.686858540494299*^9}, {3.686858724073989*^9, 
+  3.6868587649682703`*^9}, {3.686858795208947*^9, 3.6868588352382298`*^9}, {
+  3.68685887860531*^9, 3.686858944819265*^9}, {3.6868590014119787`*^9, 
+  3.686859026265122*^9}, {3.6868590569046183`*^9, 3.686859173589282*^9}, {
+  3.6868592105163116`*^9, 3.686859226603962*^9}, {3.6874613459543667`*^9, 
+  3.687461354327766*^9}, {3.687462303690695*^9, 3.6874623201381807`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "\[ClubSuit]"}], "}"}], ",", "\<\"Heart!\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "\[ClubSuit]"}], "}"}], ",", "\<\"Heart!\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "\[ClubSuit]"}], "}"}], ",", "\<\"Heart!\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "\[ClubSuit]"}], "}"}], ",", "\<\"Heart!\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "\[ClubSuit]"}], "}"}], ",", "\<\"Heart!\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "\[ClubSuit]"}], "}"}], ",", "\<\"Heart!\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "\[ClubSuit]"}], "}"}], ",", "\<\"Heart!\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "\[ClubSuit]"}], "}"}], ",", "\<\"Heart!\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "\[ClubSuit]"}], "}"}], ",", "\<\"Heart!\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"J", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"J", ",", "\[ClubSuit]"}], "}"}], ",", "\<\"Heart!\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"J", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Q", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Q", ",", "\[ClubSuit]"}], "}"}], ",", "\<\"Heart!\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"Q", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"K", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"K", ",", "\[ClubSuit]"}], "}"}], ",", "\<\"Heart!\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"K", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"A", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"A", ",", "\[ClubSuit]"}], "}"}], ",", "\<\"Heart!\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"A", ",", "\[SpadeSuit]"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.750534228467228*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.750534161894236*^9, 3.750534162734476*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question ",
+ 
+ CounterBox["Subsection"]
+}], "Subsection",
+ CellChangeTimes->{{3.6793391081481113`*^9, 3.6793391093958683`*^9}, {
+  3.679343285218049*^9, 3.679343309976263*^9}}],
+
+Cell["\<\
+A flush is a hand that consists of five cards, all of the same suit. For \
+example:\
+\>", "Text",
+ CellChangeTimes->{{3.680413231211478*^9, 3.680413272194563*^9}, {
+  3.686857848652111*^9, 3.686857879352662*^9}, {3.686857957334605*^9, 
+  3.686857984893948*^9}, {3.686858031060672*^9, 3.68685815233435*^9}, {
+  3.68685846148847*^9, 3.686858493631673*^9}, {3.686858671538447*^9, 
+  3.6868587203772383`*^9}, {3.686858783447625*^9, 3.686858786839492*^9}, {
+  3.686858874100707*^9, 3.686858875061613*^9}, {3.686859203747918*^9, 
+  3.6868592084436083`*^9}, {3.687461336969934*^9, 3.687461340399764*^9}, {
+  3.687461996081025*^9, 3.687462008200864*^9}, {3.687462374553001*^9, 
+  3.687462384840968*^9}, {3.687462686266308*^9, 3.687462688002228*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"deck", "[", 
+  RowBox[{"[", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "23", ",", "31", ",", "43", ",", "47"}], "}"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6874620106604156`*^9, 3.687462086471446*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"3", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Q", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"K", ",", "\[HeartSuit]"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.7505346569141903`*^9}]
+}, Open  ]],
+
+Cell["\<\
+Can you write a pattern that matches flush hands? Use MatchQ to verify your \
+answer. Be sure that your pattern doesn\[CloseCurlyQuote]t match non-flush \
+hands!\
+\>", "Text",
+ CellChangeTimes->{{3.687462095639104*^9, 3.6874621007108107`*^9}, {
+  3.687462367034088*^9, 3.6874624367035923`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.680413280898682*^9, 3.6804132817067957`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{
+   "Each", " ", "pattern", " ", "has", " ", "a", " ", "blank", " ", "and", 
+    " ", "a", " ", "named", " ", "blank"}], ",", " ", 
+   RowBox[{"representing", " ", "the", " ", "same", " ", "suit"}]}], " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.750534586563859*^9, 3.7505346254660463`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatchQ", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"3", ",", "\[HeartSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "\[HeartSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "\[HeartSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"Q", ",", "\[HeartSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"K", ",", "\[HeartSuit]"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"_", ",", "s_"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"_", ",", "s_"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"_", ",", "s_"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"_", ",", "s_"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"_", ",", "s_"}], "}"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6804132849165983`*^9, 3.680413291202773*^9}, {
+  3.6868579152595778`*^9, 3.686857919655836*^9}, {3.686858003861541*^9, 
+  3.686858007701529*^9}, {3.68685820187278*^9, 3.686858250215763*^9}, {
+  3.686858531625875*^9, 3.686858540494299*^9}, {3.686858724073989*^9, 
+  3.6868587649682703`*^9}, {3.686858795208947*^9, 3.6868588352382298`*^9}, {
+  3.68685887860531*^9, 3.686858944819265*^9}, {3.6868590014119787`*^9, 
+  3.686859026265122*^9}, {3.6868590569046183`*^9, 3.686859173589282*^9}, {
+  3.6868592105163116`*^9, 3.686859226603962*^9}, {3.6874613459543667`*^9, 
+  3.687461354327766*^9}, {3.6874624433518887`*^9, 3.687462461129615*^9}, {
+  3.6874624937426977`*^9, 3.687462558214178*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.750534566628458*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatchQ", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"3", ",", "\[SpadeSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "\[SpadeSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "\[SpadeSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"Q", ",", "\[SpadeSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"K", ",", "\[SpadeSuit]"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"_", ",", "s_"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"_", ",", "s_"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"_", ",", "s_"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"_", ",", "s_"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"_", ",", "s_"}], "}"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.687462570638365*^9, 3.687462578927335*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.750534662784843*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", "  ", 
+  RowBox[{
+   RowBox[{"Pattern", " ", "matching", " ", "works"}], " ", "-", "  ", 
+   RowBox[{
+   "introducing", " ", "a", " ", "different", " ", "suit", " ", "causes", " ",
+     "a", " ", "false", " ", "flush", " ", "to", " ", "be", " ", 
+    "identified"}]}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.750534876474073*^9, 3.750534929906351*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatchQ", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"3", ",", "\[SpadeSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "\[HeartSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "\[SpadeSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"Q", ",", "\[SpadeSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"K", ",", "\[SpadeSuit]"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"_", ",", "s_"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"_", ",", "s_"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"_", ",", "s_"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"_", ",", "s_"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"_", ",", "s_"}], "}"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{3.6874625857351933`*^9}],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.750534664662751*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.750534541457947*^9, 3.750534542347424*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Question ",
+ 
+ CounterBox["Subsection"]
+}], "Subsection",
+ CellChangeTimes->{{3.6793391081481113`*^9, 3.6793391093958683`*^9}, {
+  3.679343285218049*^9, 3.679343309976263*^9}}],
+
+Cell["\<\
+A full house is a five card poker hand that has a pair and a three of kind. \
+For example:\
+\>", "Text",
+ CellChangeTimes->{{3.680413231211478*^9, 3.680413272194563*^9}, {
+  3.686857848652111*^9, 3.686857879352662*^9}, {3.686857957334605*^9, 
+  3.686857984893948*^9}, {3.686858031060672*^9, 3.68685815233435*^9}, {
+  3.68685846148847*^9, 3.686858493631673*^9}, {3.686858671538447*^9, 
+  3.6868587203772383`*^9}, {3.686858783447625*^9, 3.686858786839492*^9}, {
+  3.686858874100707*^9, 3.686858875061613*^9}, {3.686859203747918*^9, 
+  3.6868592084436083`*^9}, {3.687461336969934*^9, 3.687461340399764*^9}, {
+  3.687461996081025*^9, 3.687462008200864*^9}, {3.687462374553001*^9, 
+  3.687462384840968*^9}, {3.687462617251637*^9, 3.687462675546546*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"deck", "[", 
+  RowBox[{"[", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "8", ",", "29", ",", "30", ",", "31"}], "}"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6874620106604156`*^9, 3.687462086471446*^9}, {
+  3.68746269412296*^9, 3.687462706778026*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"3", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "\[SpadeSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "\[DiamondSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "\[ClubSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "\[HeartSuit]"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.750534689038518*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Assuming that the hand is always sorted according the order of the ",
+ StyleBox["deck", "Code"],
+ ", write a pattern that matches a full house. Note: the three of a kind \
+might be smaller than the pair (which means it will appear first in the hand)."
+}], "Text",
+ CellChangeTimes->{{3.687462095639104*^9, 3.6874621007108107`*^9}, {
+  3.687462367034088*^9, 3.6874624367035923`*^9}, {3.687462717561651*^9, 
+  3.6874629001019173`*^9}, {3.68746294767706*^9, 3.6874629728849087`*^9}, {
+  3.687463006533766*^9, 3.6874630923943653`*^9}, {3.687463155266245*^9, 
+  3.6874631582963123`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Hint", "Subsubsection",
+ CellChangeTimes->{{3.687463152138135*^9, 3.687463152512562*^9}}],
+
+Cell["\<\
+You will probably need | (Alternatives) to create a composite pattern. \
+Alternatives lets you effectively have a OR between a set of patterns. If any \
+of the patterns match separated by alternatives, then the overall pattern \
+matches. For example, here\[CloseCurlyQuote]s a pattern that matches valid \
+suits:\
+\>", "Text",
+ CellChangeTimes->{{3.687463166287883*^9, 3.68746330022165*^9}}],
+
+Cell[BoxData[
+ RowBox[{"MatchQ", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"A", ",", "\[HeartSuit]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"_", ",", 
+     RowBox[{
+     "\[DiamondSuit]", "|", "\[ClubSuit]", "|", "\[HeartSuit]", "|", 
+      "\[SpadeSuit]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6874633049365997`*^9, 3.687463351484692*^9}}],
+
+Cell[BoxData[
+ RowBox[{"MatchQ", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"A", ",", "\[FivePointedStar]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"_", ",", 
+     RowBox[{
+     "\[DiamondSuit]", "|", "\[ClubSuit]", "|", "\[HeartSuit]", "|", 
+      "\[SpadeSuit]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.68746335656641*^9, 3.687463367712775*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Solution", "Subsubsection",
+ CellChangeTimes->{{3.680413280898682*^9, 3.6804132817067957`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatchQ", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"3", ",", "\[HeartSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "\[SpadeSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "\[DiamondSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "\[ClubSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "\[HeartSuit]"}], "}"}]}], "}"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"v1_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v1_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v1_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v2_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v2_", ",", "_"}], "}"}]}], "}"}], "|", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"v1_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v1_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v2_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v2_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v2_", ",", "_"}], "}"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6804132849165983`*^9, 3.680413291202773*^9}, {
+  3.6868579152595778`*^9, 3.686857919655836*^9}, {3.686858003861541*^9, 
+  3.686858007701529*^9}, {3.68685820187278*^9, 3.686858250215763*^9}, {
+  3.686858531625875*^9, 3.686858540494299*^9}, {3.686858724073989*^9, 
+  3.6868587649682703`*^9}, {3.686858795208947*^9, 3.6868588352382298`*^9}, {
+  3.68685887860531*^9, 3.686858944819265*^9}, {3.6868590014119787`*^9, 
+  3.686859026265122*^9}, {3.6868590569046183`*^9, 3.686859173589282*^9}, {
+  3.6868592105163116`*^9, 3.686859226603962*^9}, {3.6874613459543667`*^9, 
+  3.687461354327766*^9}, {3.6874624433518887`*^9, 3.687462461129615*^9}, {
+  3.6874624937426977`*^9, 3.687462558214178*^9}, {3.687462907490321*^9, 
+  3.687462944005781*^9}, {3.6874630979801893`*^9, 3.687463101731957*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.750534867929775*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatchQ", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"3", ",", "\[HeartSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "\[SpadeSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "\[DiamondSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "\[ClubSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "\[HeartSuit]"}], "}"}]}], "}"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"v1_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v1_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v1_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v2_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v2_", ",", "_"}], "}"}]}], "}"}], "|", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"v1_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v1_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v2_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v2_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v2_", ",", "_"}], "}"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6804132849165983`*^9, 3.680413291202773*^9}, {
+  3.6868579152595778`*^9, 3.686857919655836*^9}, {3.686858003861541*^9, 
+  3.686858007701529*^9}, {3.68685820187278*^9, 3.686858250215763*^9}, {
+  3.686858531625875*^9, 3.686858540494299*^9}, {3.686858724073989*^9, 
+  3.6868587649682703`*^9}, {3.686858795208947*^9, 3.6868588352382298`*^9}, {
+  3.68685887860531*^9, 3.686858944819265*^9}, {3.6868590014119787`*^9, 
+  3.686859026265122*^9}, {3.6868590569046183`*^9, 3.686859173589282*^9}, {
+  3.6868592105163116`*^9, 3.686859226603962*^9}, {3.6874613459543667`*^9, 
+  3.687461354327766*^9}, {3.6874624433518887`*^9, 3.687462461129615*^9}, {
+  3.6874624937426977`*^9, 3.687462558214178*^9}, {3.687462907490321*^9, 
+  3.687462944005781*^9}, {3.6874630979801893`*^9, 3.687463115411277*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.750534870141151*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", "  ", 
+  RowBox[{
+   RowBox[{"Pattern", " ", "matching", " ", "works"}], " ", "-", "  ", 
+   RowBox[{"introducing", " ", "non"}], "-", 
+   RowBox[{
+   "kind", " ", "pairs", " ", "values", " ", "causes", " ", "the", " ", 
+    "correct", " ", "output"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.750534964274769*^9, 3.75053499364793*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatchQ", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"2", ",", "\[HeartSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "\[SpadeSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "\[DiamondSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "\[ClubSuit]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "\[HeartSuit]"}], "}"}]}], "}"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"v1_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v1_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v1_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v2_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v2_", ",", "_"}], "}"}]}], "}"}], "|", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"v1_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v1_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v2_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v2_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v2_", ",", "_"}], "}"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6804132849165983`*^9, 3.680413291202773*^9}, {
+  3.6868579152595778`*^9, 3.686857919655836*^9}, {3.686858003861541*^9, 
+  3.686858007701529*^9}, {3.68685820187278*^9, 3.686858250215763*^9}, {
+  3.686858531625875*^9, 3.686858540494299*^9}, {3.686858724073989*^9, 
+  3.6868587649682703`*^9}, {3.686858795208947*^9, 3.6868588352382298`*^9}, {
+  3.68685887860531*^9, 3.686858944819265*^9}, {3.6868590014119787`*^9, 
+  3.686859026265122*^9}, {3.6868590569046183`*^9, 3.686859173589282*^9}, {
+  3.6868592105163116`*^9, 3.686859226603962*^9}, {3.6874613459543667`*^9, 
+  3.687461354327766*^9}, {3.6874624433518887`*^9, 3.687462461129615*^9}, {
+  3.6874624937426977`*^9, 3.687462558214178*^9}, {3.687462907490321*^9, 
+  3.687462944005781*^9}, {3.6874630979801893`*^9, 3.687463124714183*^9}}],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.750534871803771*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.750534797029398*^9, 3.750534865880849*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1400, 855},
+WindowMargins->{{29, Automatic}, {Automatic, 0}},
+ShowSelection->True,
+Magnification:>1.25 Inherited,
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3750533956-5124932"->{
+  Cell[7400, 269, 548, 12, 51, "Print",
+   CellTags->"Info3750533956-5124932"]},
+ "Info3750533960-5124932"->{
+  Cell[8098, 290, 770, 16, 70, "Print",
+   CellTags->"Info3750533960-5124932"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3750533956-5124932", 43089, 1281},
+ {"Info3750533960-5124932", 43199, 1284}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 234, 3, 114, "Title"],
+Cell[CellGroupData[{
+Cell[839, 29, 148, 2, 100, "Section"],
+Cell[CellGroupData[{
+Cell[1012, 35, 194, 6, 54, "Subsection"],
+Cell[1209, 43, 343, 12, 37, "Text"],
+Cell[1555, 57, 181, 4, 36, "Input"],
+Cell[CellGroupData[{
+Cell[1761, 65, 101, 1, 43, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[1887, 70, 285, 6, 36, "Input"],
+Cell[2175, 78, 158, 4, 36, "Output"]
+}, Open  ]],
+Cell[2348, 85, 91, 1, 35, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2488, 92, 194, 6, 54, "Subsection"],
+Cell[2685, 100, 348, 11, 37, "Text"],
+Cell[3036, 113, 165, 3, 38, "Input"],
+Cell[CellGroupData[{
+Cell[3226, 120, 101, 1, 43, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[3352, 125, 271, 6, 38, "Input"],
+Cell[3626, 133, 70, 1, 35, "Output"]
+}, Open  ]],
+Cell[3711, 137, 93, 1, 35, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3853, 144, 194, 6, 54, "Subsection"],
+Cell[4050, 152, 484, 13, 39, "Text"],
+Cell[4537, 167, 550, 20, 73, "Input"],
+Cell[CellGroupData[{
+Cell[5112, 191, 101, 1, 43, "Subsubsection"],
+Cell[5216, 194, 172, 3, 35, "Input"],
+Cell[CellGroupData[{
+Cell[5413, 201, 902, 29, 73, "Input"],
+Cell[6318, 232, 134, 4, 35, "Output"]
+}, Open  ]],
+Cell[6467, 239, 92, 1, 35, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6608, 246, 194, 6, 54, "Subsection"],
+Cell[6805, 254, 453, 7, 37, "Text"],
+Cell[CellGroupData[{
+Cell[7283, 265, 114, 2, 36, "Input"],
+Cell[7400, 269, 548, 12, 51, "Print",
+ CellTags->"Info3750533956-5124932"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7985, 286, 110, 2, 36, "Input"],
+Cell[8098, 290, 770, 16, 70, "Print",
+ CellTags->"Info3750533960-5124932"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8905, 311, 101, 1, 43, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[9031, 316, 449, 7, 36, "Input"],
+Cell[9483, 325, 73, 1, 35, "Output"]
+}, Open  ]],
+Cell[9571, 329, 92, 1, 35, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9712, 336, 194, 6, 54, "Subsection"],
+Cell[9909, 344, 579, 10, 37, "Text"],
+Cell[CellGroupData[{
+Cell[10513, 358, 101, 1, 43, "Subsubsection"],
+Cell[10617, 361, 315, 6, 36, "Input"],
+Cell[CellGroupData[{
+Cell[10957, 371, 702, 12, 36, "Input"],
+Cell[11662, 385, 75, 1, 35, "Output"]
+}, Open  ]],
+Cell[11752, 389, 90, 1, 35, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11891, 396, 194, 6, 54, "Subsection"],
+Cell[12088, 404, 613, 10, 37, "Text"],
+Cell[CellGroupData[{
+Cell[12726, 418, 101, 1, 43, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[12852, 423, 754, 13, 36, "Input"],
+Cell[13609, 438, 73, 1, 35, "Output"]
+}, Open  ]],
+Cell[13697, 442, 464, 12, 61, "Text"],
+Cell[14164, 456, 94, 1, 35, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14319, 464, 226, 3, 100, "Section"],
+Cell[14548, 469, 203, 4, 37, "Text"],
+Cell[CellGroupData[{
+Cell[14776, 477, 655, 18, 78, "Input"],
+Cell[15434, 497, 3752, 107, 99, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19223, 609, 194, 6, 54, "Subsection"],
+Cell[19420, 617, 687, 11, 37, "Text"],
+Cell[20110, 630, 148, 3, 35, "Input"],
+Cell[20261, 635, 184, 2, 37, "Text"],
+Cell[20448, 639, 94, 1, 35, "Input"],
+Cell[CellGroupData[{
+Cell[20567, 644, 101, 1, 43, "Subsubsection"],
+Cell[20671, 647, 559, 12, 36, "Input"],
+Cell[CellGroupData[{
+Cell[21255, 663, 817, 14, 36, "Input"],
+Cell[22075, 679, 3140, 81, 99, "Output"]
+}, Open  ]],
+Cell[25230, 763, 92, 1, 35, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25371, 770, 194, 6, 54, "Subsection"],
+Cell[25568, 778, 751, 12, 37, "Text"],
+Cell[CellGroupData[{
+Cell[26344, 794, 234, 6, 35, "Input"],
+Cell[26581, 802, 447, 13, 35, "Output"]
+}, Open  ]],
+Cell[27043, 818, 304, 6, 37, "Text"],
+Cell[CellGroupData[{
+Cell[27372, 828, 101, 1, 43, "Subsubsection"],
+Cell[27476, 831, 351, 8, 36, "Input"],
+Cell[CellGroupData[{
+Cell[27852, 843, 1539, 36, 36, "Input"],
+Cell[29394, 881, 73, 1, 35, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29504, 887, 896, 27, 36, "Input"],
+Cell[30403, 916, 73, 1, 35, "Output"]
+}, Open  ]],
+Cell[30491, 920, 386, 8, 36, "Input"],
+Cell[CellGroupData[{
+Cell[30902, 932, 874, 27, 36, "Input"],
+Cell[31779, 961, 74, 1, 35, "Output"]
+}, Open  ]],
+Cell[31868, 965, 92, 1, 35, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32009, 972, 194, 6, 54, "Subsection"],
+Cell[32206, 980, 758, 12, 37, "Text"],
+Cell[CellGroupData[{
+Cell[32989, 996, 281, 7, 35, "Input"],
+Cell[33273, 1005, 446, 13, 35, "Output"]
+}, Open  ]],
+Cell[33734, 1021, 600, 10, 61, "Text"],
+Cell[CellGroupData[{
+Cell[34359, 1035, 95, 1, 43, "Subsubsection"],
+Cell[34457, 1038, 401, 7, 95, "Text"],
+Cell[34861, 1047, 363, 10, 62, "Input"],
+Cell[35227, 1059, 366, 10, 62, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[35630, 1074, 101, 1, 34, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[35756, 1079, 2044, 50, 58, "Input"],
+Cell[37803, 1131, 73, 1, 35, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37913, 1137, 2044, 50, 58, "Input"],
+Cell[39960, 1189, 73, 1, 35, "Output"]
+}, Open  ]],
+Cell[40048, 1193, 366, 8, 36, "Input"],
+Cell[CellGroupData[{
+Cell[40439, 1205, 2044, 50, 58, "Input"],
+Cell[42486, 1257, 74, 1, 35, "Output"]
+}, Open  ]],
+Cell[42575, 1261, 90, 1, 35, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
